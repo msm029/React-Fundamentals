@@ -1,5 +1,5 @@
 {
   "projects": {
-    "production": "rt-react-fundamentals"
+    "default": "rt-react-fundamentals"
   }
 }
