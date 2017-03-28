@@ -4,7 +4,8 @@
   "description": "Project for React Training's fundamental course.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "webpack -p"
   },
   "keywords": [
     "react",
@@ -19,15 +20,15 @@
     "babel-preset-react": "^6.23.0",
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.3.1",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "style-loader": "^0.16.0",
+    "css-loader": "^0.27.3"
   },
   "dependencies": {
     "axios": "^0.15.3",
-    "css-loader": "^0.27.3",
     "query-string": "^4.3.2",
     "react": "^16.0.0-alpha.5",
     "react-dom": "^16.0.0-alpha.5",
-    "react-router-dom": "^4.0.0",
-    "style-loader": "^0.16.0"
+    "react-router-dom": "^4.0.0"
   }
 }

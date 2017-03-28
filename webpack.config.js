@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
-    publicPath: '/' //https://github.com/ReactTraining/react-router/issues/676
+    publicPath: '/'
   },
   module: {
     rules: [
