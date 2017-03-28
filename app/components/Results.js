@@ -1,8 +1,7 @@
 var React = require('react');
 var queryString = require('query-string');
 var api = require('../utils/api');
-var ReactRouter = require('react-router-dom');
-var Link = ReactRouter.Link;
+var Link = require('react-router-dom').Link;
 var PlayerPreview = require('./PlayerPreview');
 var Loading = require('./Loading');
 

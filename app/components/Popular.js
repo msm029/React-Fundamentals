@@ -6,15 +6,22 @@ class Popular extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      language: 'All',
+      selectedLanguage: 'All',
       repos: null,
     };
   }
   componentDidMount() {
-    this.updateLanguage(this.state.language)
+    this.updateLanguage(this.state.selectedLanguage)
   }
-  updatePopularRepos(language){
-    api.fetchPopularRepos(language)
+  updateLanguage(lang) {
+    this.setState(function () {
+      return {
+        selectedLanguage: lang,
+        repos: null
+      }
+    });
+
+    api.fetchPopularRepos(lang)
       .then(function (repos) {
         this.setState(function () {
           return {
@@ -23,20 +30,8 @@ class Popular extends React.Component {
         });
       }.bind(this));
   }
-  updateLanguage(lang) {
-    this.setState(function () {
-      return {
-        language: lang,
-        repos: null
-      }
-    });
-
-    this.updatePopularRepos(lang);
-  }
   render() {
     var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python']
-
-    var language = this.state.language;
 
     return (
       <div>
@@ -44,7 +39,7 @@ class Popular extends React.Component {
           {languages.map(function (lang) {
             return (
               <li
-                style={lang === language ? {color: '#d0021b'} : null}
+                style={lang === this.state.selectedLanguage ? {color: '#d0021b'} : null}
                 onClick={this.updateLanguage.bind(this, lang)}
                 key={lang}>
                   {lang}

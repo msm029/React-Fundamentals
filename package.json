@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack -p",
-    "firebase-init": "firebase init",
+    "firebase-init": "firebase login && firebase init",
     "deploy": "npm run build && firebase deploy"
   },
   "keywords": [

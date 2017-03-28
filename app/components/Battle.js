@@ -1,7 +1,5 @@
 var React = require('react');
-var ReactRouter = require('react-router-dom');
-var Link = ReactRouter.Link;
-var Route = ReactRouter.Route;
+var Link = require('react-router-dom').Link;
 var PlayerPreview = require('./PlayerPreview');
 
 class PlayerInput extends React.Component {

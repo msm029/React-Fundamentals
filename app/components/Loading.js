@@ -5,7 +5,7 @@ var styles = {
     textAlign: 'center',
     fontSize: '35px'
   }
-}
+};
 
 class Loading extends React.Component {
   constructor(props) {

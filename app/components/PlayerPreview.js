@@ -15,6 +15,6 @@ function PlayerPreview (props) {
 PlayerPreview.propTypes = {
   avatar: React.PropTypes.string.isRequired,
   username: React.PropTypes.string.isRequired,
-}
+};
 
 module.exports = PlayerPreview;

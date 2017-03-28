@@ -9,10 +9,6 @@ var Battle = require('./Battle');
 var Results = require('./Results');
 var Popular = require('./Popular');
 
-function NotFound () {
-  return <p>Not Found</p>
-}
-
 class App extends React.Component {
   render() {
     return (
@@ -25,7 +21,9 @@ class App extends React.Component {
             <Route exact path='/battle' component={Battle} />
             <Route path='/battle/results' component={Results} />
             <Route path='/popular' component={Popular} />
-            <Route component={NotFound} />
+            <Route render={function () {
+              return <p>Not Found</p>
+            }} />
           </Switch>
         </div>
       </Router>
