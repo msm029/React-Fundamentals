@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 var Link = require('react-router-dom').Link;
 var PlayerPreview = require('./PlayerPreview');
 
@@ -53,9 +54,9 @@ class PlayerInput extends React.Component {
 }
 
 PlayerInput.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
-  onSubmit: React.PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 }
 
 PlayerInput.defaultProps = {

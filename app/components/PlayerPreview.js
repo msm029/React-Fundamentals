@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 
 function PlayerPreview (props) {
   return (
@@ -17,8 +18,8 @@ function PlayerPreview (props) {
 }
 
 PlayerPreview.propTypes = {
-  avatar: React.PropTypes.string.isRequired,
-  username: React.PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
 };
 
 module.exports = PlayerPreview;

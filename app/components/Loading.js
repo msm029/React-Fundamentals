@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 
 var styles = {
   content: {
@@ -46,8 +47,8 @@ class Loading extends React.Component {
 }
 
 Loading.propTypes = {
-  text: React.PropTypes.string,
-  speed: React.PropTypes.number
+  text: PropTypes.string,
+  speed: PropTypes.number
 };
 
 Loading.defaultProps = {

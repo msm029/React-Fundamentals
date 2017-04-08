@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 var api = require('../utils/api');
 var Loading = require('./Loading');
 
@@ -19,6 +20,11 @@ function SelectLanguage (props) {
     </ul>
   )
 }
+
+SelectLanguage.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
+};
 
 function RepoGrid (props) {
   return (
@@ -47,13 +53,8 @@ function RepoGrid (props) {
 }
 
 RepoGrid.propTypes = {
-  repos: React.PropTypes.array.isRequired,
+  repos: PropTypes.array.isRequired,
 }
-
-SelectLanguage.propTypes = {
-  selectedLanguage: React.PropTypes.string.isRequired,
-  onSelect: React.PropTypes.func.isRequired,
-};
 
 class Popular extends React.Component {
   constructor(props) {
