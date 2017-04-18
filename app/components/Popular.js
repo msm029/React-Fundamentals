@@ -1,9 +1,10 @@
-var React = require('react');
-var api = require('../utils/api');
-var Loading = require('./Loading');
+import React from 'react'
+
+import api from '../utils/api'
+import Loading from './Loading'
 
 function SelectLanguage (props) {
-  var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
+  const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
   return (
     <ul className='languages'>
       {languages.map(function (lang) {
@@ -99,4 +100,4 @@ class Popular extends React.Component {
   }
 }
 
-module.exports = Popular;
+export default Popular

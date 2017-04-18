@@ -1,18 +1,19 @@
-var React = require('react');
-var ReactRouter = require('react-router-dom');
-var Router = ReactRouter.BrowserRouter;
-var Route = ReactRouter.Route;
-var Switch = ReactRouter.Switch;
-var Nav = require('./Nav');
-var Home = require('./Home');
-var Battle = require('./Battle');
-var Popular = require('./Popular');
-var Results = require('./Results');
+import React from 'react'
+
+import {Route, BrowserRouter, Switch} from 'react-router-dom'
+
+import Nav from './Nav'
+import Home from './Home'
+
+import Battle from './Battle'
+
+import Popular from './Popular'
+import Results from './Results'
 
 class App extends React.Component {
   render() {
     return (
-      <Router>
+      <BrowserRouter>
         <div className='container'>
           <Nav />
 
@@ -26,7 +27,7 @@ class App extends React.Component {
             }} />
           </Switch>
         </div>
-      </Router>
+      </BrowserRouter>
     )
   }
 }
